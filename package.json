@@ -1,0 +1,11 @@
+{
+  "name": "preloader",
+  "version": "1.0.0",
+  "description": "is not a bundler. Intentionally. This is an experiemnt to find out if a bundler is not actually obsolete.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
