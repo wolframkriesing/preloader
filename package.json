@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-with-parcel",
-    "build-with-parcel": "parcel build --out-dir dist/parcel code-to-be-loaded/src/index.js --no-cache --no-source-maps --experimental-scope-hoisting"
+    "build": "npm run build-with-parcel && npm run build-with-rollup",
+    "build-with-parcel": "parcel build --out-dir dist/parcel code-to-be-loaded/src/index.js --no-cache --no-source-maps --experimental-scope-hoisting",
+    "build-with-rollup": "rollup --dir dist/rollup code-to-be-loaded/src/index.js",
+    "serve-code-to-be-loaded": "ws --cors.origin=* --port 48001"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "atomicjs": "^4.3.1",
     "babel-polyfill": "^6.26.0",
+    "local-web-server": "^2.6.1",
     "parcel": "^1.12.0",
     "puppeteer": "^1.13.0",
     "react": "^16.8.4",
