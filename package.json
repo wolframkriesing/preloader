@@ -4,11 +4,19 @@
   "description": "is not a bundler. Intentionally. This is an experiemnt to find out if a bundler is not actually obsolete.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-with-parcel",
+    "build-with-parcel": "parcel build --out-dir dist/parcel code-to-be-loaded/src/index.js --no-cache --no-source-maps --experimental-scope-hoisting"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^1.13.0"
+    "atomicjs": "^4.3.1",
+    "babel-polyfill": "^6.26.0",
+    "parcel": "^1.12.0",
+    "puppeteer": "^1.13.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "rollup": "^1.6.0"
   }
 }
